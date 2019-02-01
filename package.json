@@ -27,9 +27,9 @@
     "chalk": "^2.4.2",
     "commander": "^2.19.0",
     "markdown-it": "^8.4.2",
+    "markdown-it-abbr": "^1.0.4",
     "markdown-it-anchor": "^5.0.2",
     "markdown-it-deflist": "^2.0.3",
-    "markdown-it-highlightjs": "^3.0.0",
     "markdown-it-sub": "^1.0.0",
     "markdown-it-sup": "^1.0.0",
     "mkdirp": "^0.5.1"

@@ -20,6 +20,7 @@
   - [Definition lists][deflist]
   - [Superscript][superscript]
   - [Subscript][subscript]
+  - [Abbreviations][abbreviation]
 - Integrated CLI tool for command-line conversion to HTML
 
 [typographer]: https://github.com/markdown-it/markdown-it/blob/master/lib/rules_core/replacements.js
@@ -28,6 +29,7 @@
 [deflist]: https://github.com/markdown-it/markdown-it-deflist
 [superscript]: https://github.com/markdown-it/markdown-it-sup
 [subscript]: https://github.com/markdown-it/markdown-it-sub
+[abbreviation]: https://github.com/markdown-it/markdown-it-abbr
 
 ## Usage
 

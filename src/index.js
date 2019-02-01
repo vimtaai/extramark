@@ -7,6 +7,8 @@ import sub from "markdown-it-sub";
 import abbr from "markdown-it-abbr";
 import footnote from "markdown-it-footnote";
 
+import critic from "./critic";
+
 const parser = new MarkdownIt("commonmark");
 
 parser.set({ typographer: true });
@@ -17,7 +19,8 @@ parser
   .use(sup)
   .use(sub)
   .use(abbr)
-  .use(footnote);
+  .use(footnote)
+  .use(critic);
 
 export const ExtraMark = {
   parse: parser.parse.bind(parser),

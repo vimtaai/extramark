@@ -22,6 +22,7 @@
   - [Subscript][subscript]
   - [Abbreviations][abbreviation]
   - [Footnotes][footnote]
+  - [Critic Markup][critic-markup]
 - Integrated CLI tool for command-line conversion to HTML
 
 [typographer]: https://github.com/markdown-it/markdown-it/blob/master/lib/rules_core/replacements.js
@@ -32,6 +33,7 @@
 [subscript]: https://github.com/markdown-it/markdown-it-sub
 [abbreviation]: https://github.com/markdown-it/markdown-it-abbr
 [footnote]: https://github.com/markdown-it/markdown-it-footnote
+[critic-markup]: http://criticmarkup.com/
 
 ## Usage
 

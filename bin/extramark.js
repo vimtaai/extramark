@@ -46,6 +46,7 @@ ${await ExtraMark.render(input.data)}
     `;
   } catch (_) {
     logger.error(`parse`, `Could not parse input data.`);
+    logger.info(`error`, _);
     return;
   }
 

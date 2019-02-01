@@ -21,15 +21,17 @@
   - [Superscript][superscript]
   - [Subscript][subscript]
   - [Abbreviations][abbreviation]
+  - [Footnotes][footnote]
 - Integrated CLI tool for command-line conversion to HTML
 
 [typographer]: https://github.com/markdown-it/markdown-it/blob/master/lib/rules_core/replacements.js
-[table]: https://github.github.com/gfm/#tables-extension-
+[table]: https://help.github.com/articles/organizing-information-with-tables/
 [anchor]: https://www.npmjs.com/package/markdown-it-anchor
 [deflist]: https://github.com/markdown-it/markdown-it-deflist
 [superscript]: https://github.com/markdown-it/markdown-it-sup
 [subscript]: https://github.com/markdown-it/markdown-it-sub
 [abbreviation]: https://github.com/markdown-it/markdown-it-abbr
+[footnote]: https://github.com/markdown-it/markdown-it-footnote
 
 ## Usage
 

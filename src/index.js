@@ -5,17 +5,19 @@ import deflist from "markdown-it-deflist";
 import sup from "markdown-it-sup";
 import sub from "markdown-it-sub";
 import abbr from "markdown-it-abbr";
+import footnote from "markdown-it-footnote";
 
 const parser = new MarkdownIt("commonmark");
 
-parser.set({ linkify: true }).set({ typographer: true });
+parser.set({ typographer: true });
 parser.enable("replacements").enable("table");
 parser
   .use(anchor, [1, 2, 3])
   .use(deflist)
   .use(sup)
   .use(sub)
-  .use(abbr);
+  .use(abbr)
+  .use(footnote);
 
 export const ExtraMark = {
   parse: parser.parse.bind(parser),

@@ -2,24 +2,18 @@ import MarkdownIt from "markdown-it";
 
 import anchor from "markdown-it-anchor";
 import deflist from "markdown-it-deflist";
-import container from "markdown-it-container";
-
-import { anchorConfig } from "./config/anchor";
-import { containerConfig } from "./config/container";
+import sup from "markdown-it-sup";
+import sub from "markdown-it-sub";
 
 const parser = new MarkdownIt("commonmark");
 
 parser.set({ linkify: true }).set({ typographer: true });
+parser.enable("replacements").enable("table");
 parser
-  .enable("linkify")
-  .enable("strikethrough")
-  .enable("smartquotes")
-  .enable("replacements")
-  .enable("table");
-parser
-  .use(anchor, anchorConfig)
+  .use(anchor, [1, 2, 3])
   .use(deflist)
-  .use(container, "", containerConfig);
+  .use(sup)
+  .use(sub);
 
 export const ExtraMark = {
   parse: parser.parse.bind(parser),

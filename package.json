@@ -10,7 +10,7 @@
   "license": "MIT",
   "module": "src/index.js",
   "main": "lib/extramark.js",
-  "browser": "dist/extramark.js",
+  "browser": "dist/extramark.min.js",
   "bin": "bin/extramark.js",
   "repository": "github:vimtaai/extramark",
   "homepage": "https://github.com/vimtaai/extramark#readme",

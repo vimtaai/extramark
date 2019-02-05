@@ -66,7 +66,7 @@ const criticMarkupRule = state => {
   state.src = state.src.replace(regex, replaceCriticMarkup);
 };
 
-export const markdownItCriticMarkup = md => {
+const markdownItCriticMarkup = md => {
   md.core.ruler.before("block", "critic-markup", criticMarkupRule);
 };
 

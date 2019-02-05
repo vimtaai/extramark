@@ -20,8 +20,9 @@ if (process.env.TARGET === "browser") {
   const filename = name + (process.env.BUILD === "production" ? ".min" : "") + ".js";
 
   output.format = "iife";
+  output.name = "window";
+  output.extend = true;
   output.file = path.join("dist", filename);
-  output.name = name;
   output.sourcemap = process.env.BUILD !== "production";
 }
 

@@ -47,7 +47,7 @@ The `extramark` package includes a CommonJS build in the `lib` folder. To use th
 npm install extramark
 ```
 
-The `extramark` module has a single named export called `ExtraMark`. This object exposes a `.parse(input)` and a `.render(input)` method. The `parse` method creates an abstract syntax tree from the input while the `render` method generates the output HTML. (see [markdown-it](https://github.com/markdown-it/markdown-it))
+The `extramark` module has a single named export called `ExtraMark`. This object exposes a `.parse(input)` and a `.render(input)` method. The `parse` method creates an abstract syntax tree from the input while the `render` method generates the output HTML (see [markdown-it](https://github.com/markdown-it/markdown-it)).
 
 ```js
 const { ExtraMark } = require("extramark");
@@ -77,7 +77,7 @@ extramark --help
 
 ### Browser
 
-The `extramark` package includes a browser build in [IIFE]() format in the `dist` folder. You can include the production (`extramark.min.js`) or development (`extramark.js`) builds in your HTML. The scripts expose the ExtraMark object into the global scope.
+The `extramark` package includes a browser build in [IIFE]https://developer.mozilla.org/en-US/docs/Glossary/IIFE) format in the `dist` folder. You can include the production (`extramark.min.js`) or development (`extramark.js`) build in your HTML. The script exposes the ExtraMark object into the global scope.
 
 ```html
 <script src="path/to/extramark.min.js"></script>
@@ -86,7 +86,7 @@ The `extramark` package includes a browser build in [IIFE]() format in the `dist
 </script>
 ```
 
-The recommended way to add `extramark` to you site from a CDN like [jsdelivr](https://www.jsdelivr.com/package/npm/extramark) or [unpkg](https://unpkg.com/extramark).
+The recommended way to add `extramark` to your site is from a CDN like [jsdelivr](https://www.jsdelivr.com/package/npm/extramark) or [unpkg](https://unpkg.com/extramark).
 
 ## Prerequisites
 

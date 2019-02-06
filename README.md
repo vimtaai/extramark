@@ -8,7 +8,7 @@
 
 ## About
 
-**ExtraMark** is a superset of [CommonMark](https://commonmark.org/) that includes syntax extensions that are commonly used by other Markdown dialects. The list and syntax for the extensions are decided by looking at the most popular Markdown dialects and selecting the most common syntax for each feature. The goal of the project is to create a (somewhat) standard superset of CommonMark that supports the features that are requested by most.
+**ExtraMark** is a superset of [CommonMark](https://commonmark.org/) that includes syntax extensions that are commonly used by other Markdown dialects. The list and syntax for the extensions are decided by looking at the most popular Markdown dialects and selecting the most common syntax for each feature. The goal of the project is to create a (somewhat) standard superset of CommonMark that supports the features that are requested by most. The parser is based on [markdown-it](https://github.com/markdown-it/markdown-it) and uses plugins for syntax extensions.
 
 ## Features
 
@@ -27,7 +27,7 @@
 
 [typographer]: https://github.com/markdown-it/markdown-it/blob/master/lib/rules_core/replacements.js
 [table]: https://help.github.com/articles/organizing-information-with-tables/
-[anchor]: https://www.npmjs.com/package/markdown-it-anchor
+[anchor]: https://github.com/valeriangalliat/markdown-it-anchor
 [deflist]: https://github.com/markdown-it/markdown-it-deflist
 [superscript]: https://github.com/markdown-it/markdown-it-sup
 [subscript]: https://github.com/markdown-it/markdown-it-sub
@@ -37,15 +37,60 @@
 
 ## Usage
 
+The ExtraMark parser can be used to transform Markdown code into HTML. You can use the parser in both NodeJS and browser environments.
+
 ### NodeJS
+
+The `extramark` package includes a CommonJS build in the `lib` folder. To use the ExtraMark parser in NodeJS you have to install it as a local dependency.
+
+```bash
+npm install extramark
+```
+
+The `extramark` module has a single named export called `ExtraMark`. This object exposes a `.parse(input)` and a `.render(input)` method. The `parse` method creates an abstract syntax tree from the input while the `render` method generates the output HTML. (see [markdown-it](https://github.com/markdown-it/markdown-it))
+
+```js
+const { ExtraMark } = require("extramark");
+
+const html = ExtraMark.render("# Heading");
+```
 
 ### CLI
 
+To transform documents in the command line you have to install the `extramark` package globally.
+
+```bash
+npm install -g extramark
+```
+
+After the installation the `extramark` command becomes available. The command can be used to transform the input text (file or `stdin`) to HTML (file or `stdout`).
+
+```bash
+extramark input.md -o output.html -c style.css
+```
+
+To see all options of the `extramark` see it's help:
+
+```bash
+extramark --help
+```
+
 ### Browser
+
+The `extramark` package includes a browser build in [IIFE]() format in the `dist` folder. You can include the production (`extramark.min.js`) or development (`extramark.js`) builds in your HTML. The scripts expose the ExtraMark object into the global scope.
+
+```html
+<script src="path/to/extramark.min.js"></script>
+<script>
+  const html = ExtraMark.render("# Heading");
+</script>
+```
+
+The recommended way to add `extramark` to you site from a CDN like [jsdelivr](https://www.jsdelivr.com/package/npm/extramark) or [unpkg](https://unpkg.com/extramark).
 
 ## Prerequisites
 
-You need to have [Node.js](https://nodejs.org) installed on your computer to use the CLI tool.
+You need to have [NodeJS](https://nodejs.org) installed on your computer to use the CLI tool.
 
 ## Contributing
 

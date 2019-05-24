@@ -25,10 +25,11 @@
   },
   "dependencies": {
     "chalk": "^2.4.2",
-    "commander": "^2.19.0",
+    "commander": "^2.20.0",
+    "critic-markup": "^0.1.0",
     "markdown-it": "^8.4.2",
     "markdown-it-abbr": "^1.0.4",
-    "markdown-it-anchor": "^5.0.2",
+    "markdown-it-anchor": "^5.1.0",
     "markdown-it-deflist": "^2.0.3",
     "markdown-it-footnote": "^3.0.1",
     "markdown-it-sub": "^1.0.0",
@@ -36,12 +37,12 @@
     "mkdirp": "^0.5.1"
   },
   "devDependencies": {
-    "rollup": "^1.1.2",
-    "rollup-plugin-commonjs": "^9.2.0",
-    "rollup-plugin-json": "^3.1.0",
+    "rollup": "^1.12.3",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-builtins": "^2.1.2",
-    "rollup-plugin-node-resolve": "^4.0.0",
-    "rollup-plugin-terser": "^4.0.3"
+    "rollup-plugin-node-resolve": "^5.0.0",
+    "rollup-plugin-terser": "^5.0.0"
   },
   "prettier": {
     "printWidth": 100

@@ -17,14 +17,14 @@ program
   .option("-q --quiet", "omit console output")
   .parse(process.argv);
 
-const convert = async program => {
+async function convert(program) {
   const input = {
     file: program.input || program.args[0] || process.stdin.fd
   };
 
   const output = {
-    file: program.output || process.stdout.fd,
-    dir: program.output ? path.dirname(program.output) : ""
+    dir: program.output ? path.dirname(program.output) : "",
+    file: program.output || process.stdout.fd
   };
 
   logger.enabled = !program.quiet && output.file !== process.stdout.fd;
@@ -63,6 +63,6 @@ ${await ExtraMark.render(input.data)}
   } catch (_) {
     logger.error(`create`, `Could not write output file \`${output.file}\`.`);
   }
-};
+}
 
 convert(program);

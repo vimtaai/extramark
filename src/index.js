@@ -7,7 +7,7 @@ import sub from "markdown-it-sub";
 import abbr from "markdown-it-abbr";
 import footnote from "markdown-it-footnote";
 
-import critic from "./critic";
+import critic from "./syntax/critic";
 
 const parser = new MarkdownIt("commonmark");
 

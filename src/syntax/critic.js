@@ -1,7 +1,7 @@
-import { renderCriticMarkup } from "critic-markup";
+import { render } from "critic-markup";
 
 const criticMarkupRule = state => {
-  state.src = renderCriticMarkup(state.src);
+  state.src = render(state.src);
 };
 
 const markdownItCriticMarkup = md => {

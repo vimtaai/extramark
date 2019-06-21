@@ -22,7 +22,5 @@ parser
   .use(footnote)
   .use(critic);
 
-export const ExtraMark = {
-  parse: parser.parse.bind(parser),
-  render: parser.render.bind(parser)
-};
+export const parse = parser.parse.bind(parser);
+export const render = parser.render.bind(parser);

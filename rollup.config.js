@@ -1,42 +1,30 @@
-import path from "path";
-import resolve from "rollup-plugin-node-resolve";
-import builtins from "rollup-plugin-node-builtins";
-import commonjs from "rollup-plugin-commonjs";
-import json from "rollup-plugin-json";
-import { terser } from "rollup-plugin-terser";
+const resolve = require("rollup-plugin-node-resolve");
+const babel = require("rollup-plugin-babel");
+const minify = require("rollup-plugin-babel-minify");
+const commonjs = require("rollup-plugin-commonjs");
+const builtins = require("rollup-plugin-node-builtins");
+const json = require("rollup-plugin-json");
 
-import { name, module as input } from "./package.json";
+const { name: outputFileName, module: input } = require("./package.json");
 
+const isProductionBuild = process.env.BUILD === "production";
 const output = {};
+const plugins = [resolve({ preferBuiltins: false }), babel(), commonjs(), json(), builtins()];
 
 if (process.env.TARGET === "node") {
-  const filename = name + ".js";
-
   output.format = "cjs";
-  output.file = path.join("lib", filename);
+  output.file = `lib/${outputFileName}.js`;
 }
 
 if (process.env.TARGET === "browser") {
-  const filename = name + (process.env.BUILD === "production" ? ".min" : "") + ".js";
-
   output.format = "iife";
-  output.name = "window";
-  output.extend = true;
-  output.file = path.join("dist", filename);
-  output.sourcemap = process.env.BUILD !== "production";
+  output.file = `dist/${outputFileName}${isProductionBuild ? ".min" : ""}.js`;
+  output.name = "ExtraMark";
+  output.sourcemap = !isProductionBuild;
+
+  if (isProductionBuild) {
+    plugins.push(minify());
+  }
 }
 
-const plugins = [resolve(), builtins(), commonjs(), json()];
-
-if (process.env.BUILD === "production") {
-  plugins.push(terser());
-}
-
-const watch = { include: "src/**" };
-
-export default {
-  input,
-  output,
-  plugins,
-  watch
-};
+module.exports = { input, output, plugins };

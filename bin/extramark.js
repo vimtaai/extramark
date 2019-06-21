@@ -5,7 +5,7 @@ const program = require("commander");
 
 const { ensureDir, readFile, writeFile } = require("fs-extra");
 const { html } = require("common-tags");
-const { ExtraMark } = require("../lib/extramark");
+const { render } = require("../lib/extramark");
 const { logger } = require("./utils/logger");
 
 program
@@ -47,7 +47,7 @@ async function convert(program) {
       <meta charset="utf-8" />
       <title>${program.title || `Markdown document`}</title>
       ${program.css ? `<link rel="stylesheet" href="${program.css}">` : ``}
-      ${await ExtraMark.render(input.data)}
+      ${await render(input.data)}
     `;
   } catch (err) {
     logger.error(`Could not parse input data.\n`, err);

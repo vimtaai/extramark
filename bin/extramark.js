@@ -3,9 +3,10 @@
 const path = require("path");
 const program = require("commander");
 
-const { logger } = require("./logger");
-const { createDir, readFile, writeFile } = require("./util");
+const { ensureDir, readFile, writeFile } = require("fs-extra");
+const { html } = require("common-tags");
 const { ExtraMark } = require("../lib/extramark");
+const { logger } = require("./utils/logger");
 
 program
   .description("CLI for converting Markdown documents to HTML with ExtraMark")
@@ -27,41 +28,45 @@ async function convert(program) {
     file: program.output || process.stdout.fd
   };
 
-  logger.enabled = !program.quiet && output.file !== process.stdout.fd;
+  if (program.quiet || output.file === process.stdout.fd) {
+    logger.disable();
+  }
 
   try {
+    logger.await("Reading input...");
     input.data = await readFile(input.file, "utf-8");
-  } catch (_) {
-    logger.error(`read`, `Could not find input file \`${input.file}\`.`);
+  } catch (err) {
+    logger.error(`Could not read input file \`${input.file}\`.\n`, err);
     return;
   }
 
   try {
-    output.data = `
-<!doctype html>
-<meta charset="utf-8">
-<title>${program.title || `Markdown document`}</title>
-${program.css ? `<link rel="stylesheet" href="${program.css}">` : ``}
-${await ExtraMark.render(input.data)}
+    logger.await("Generating output...");
+    output.data = html`
+      <!DOCTYPE html>
+      <meta charset="utf-8" />
+      <title>${program.title || `Markdown document`}</title>
+      ${program.css ? `<link rel="stylesheet" href="${program.css}">` : ``}
+      ${await ExtraMark.render(input.data)}
     `;
-  } catch (_) {
-    logger.error(`parse`, `Could not parse input data.`);
-    logger.info(`error`, _);
+  } catch (err) {
+    logger.error(`Could not parse input data.\n`, err);
     return;
   }
 
   try {
-    await createDir(output.dir);
-  } catch (_) {
-    logger.error(`create`, `Could not create output dir \`${output.dir}\`.`);
+    await ensureDir(output.dir);
+  } catch (err) {
+    logger.error(`Could not create output dir \`${output.dir}\`.\n`, err);
     return;
   }
 
   try {
+    logger.await("Writing output...");
     await writeFile(output.file, output.data);
-    logger.success(`create`, output.file);
-  } catch (_) {
-    logger.error(`create`, `Could not write output file \`${output.file}\`.`);
+    logger.success(`Created: ${output.file}`);
+  } catch (err) {
+    logger.error(`Could not write output file \`${output.file}\`.\n`, err);
   }
 }
 

@@ -16,12 +16,12 @@
   ],
   "scripts": {
     "lint": "eslint src/**.js",
-    "build:node": "rollup --config --environment TARGET:node",
-    "build:browser": "rollup --config --environment TARGET:browser,BUILD:production",
-    "build:browser:dev": "rollup --config --environment TARGET:browser",
-    "watch:node": "rollup --config --environment TARGET:node --watch",
-    "watch:browser": "rollup --config --environment TARGET:browser --watch",
-    "prepare": "npm run build:node && npm run build:browser && npm run build:browser:dev"
+    "build:node": "rollup -c --environment TARGET:node",
+    "build:browser": "rollup -c --environment TARGET:browser,BUILD:development",
+    "build:browser:production": "rollup -c --environment TARGET:browser,BUILD:production",
+    "watch:node": "rollup -c -w --environment TARGET:node",
+    "watch:browser": "rollup -c -w --environment TARGET:browser,BUILD:development",
+    "prepare": "npm run build:node && npm run build:browser && npm run build:browser:production"
   },
   "dependencies": {
     "commander": "^2.20.0",

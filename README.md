@@ -2,7 +2,7 @@
 
 [![Version][badge-version]](https://npmjs.com/package/extramark)
 [![License][badge-license]](https://github.com/vimtaai/extramark/blob/master/LICENSE.md)
-[![Code style](badge-style)](https://github.com/prettier/prettier)
+[![Code style][badge-style]](https://github.com/prettier/prettier)
 
 > CommonMark superset with the most widely used syntax extensions
 

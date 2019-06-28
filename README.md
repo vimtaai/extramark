@@ -1,16 +1,68 @@
 # ExtraMark
 
-[![NPM version 0.1.0](https://img.shields.io/badge/npm-0.1.0-blue.svg)](https://npmjs.com/package/extramark)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![MIT license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/vimtaai/extramark/blob/master/LICENSE.md)
+[![Version][badge-version]](https://npmjs.com/package/extramark)
+[![License][badge-license]](https://github.com/vimtaai/extramark/blob/master/LICENSE.md)
+[![Code style](badge-style)](https://github.com/prettier/prettier)
 
 > CommonMark superset with the most widely used syntax extensions
 
-## About
-
 **ExtraMark** is a superset of [CommonMark](https://commonmark.org/) that includes syntax extensions that are commonly used by other Markdown dialects. The list and syntax for the extensions are decided by looking at the most popular Markdown dialects and selecting the most common syntax for each feature. The goal of the project is to create a (somewhat) standard superset of CommonMark that supports the features that are requested by most. The parser is based on [markdown-it](https://github.com/markdown-it/markdown-it) and uses plugins for syntax extensions.
 
-## Features
+## Installation
+
+Install via `npm`:
+
+```bash
+npm install extramark
+```
+
+Load from a CDN:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/extramark"></script>
+```
+
+## Usage
+
+The `extramark` package exposes two functions, `parse()` and `render()`. The `parse()` function creates an abstract syntax tree from the input while the `render()` function returns the generated HTML code (see [markdown-it](https://github.com/markdown-it/markdown-it)).
+
+```js
+const { parse, render } = require("extramark");
+
+parse("# Heading");
+// [Object] - AST of the Markdown code
+
+render("# Heading");
+// <h1>Heading</h1>
+```
+
+In a browser environment you can access the `parse()` and `render()` functions via the `ExtraMark` global object.
+
+```js
+const { parse, render } = ExtraMark;
+```
+
+### CLI
+
+To transform documents in the command line you have to install the `extramark` package globally.
+
+```bash
+npm install -g extramark
+```
+
+After the installation the `extramark` command becomes available. The command can be used to transform the input text (file or `stdin`) to HTML (file or `stdout`).
+
+```bash
+extramark input.md -o output.html -c style.css
+```
+
+To see all options of the `extramark` see it's help:
+
+```bash
+extramark --help
+```
+
+### Features
 
 - Defined clearly as a superset of CommonMark
 - Syntax extensions
@@ -35,63 +87,10 @@
 [footnote]: https://github.com/markdown-it/markdown-it-footnote
 [critic-markup]: http://criticmarkup.com/
 
-## Usage
-
-The ExtraMark parser can be used to transform Markdown code into HTML. You can use the parser in both NodeJS and browser environments.
-
-### NodeJS
-
-The `extramark` package includes a CommonJS build in the `lib` folder. To use the ExtraMark parser in NodeJS you have to install it as a local dependency.
-
-```bash
-npm install extramark
-```
-
-The `extramark` module has a single named export called `ExtraMark`. This object exposes a `.parse(input)` and a `.render(input)` method. The `parse` method creates an abstract syntax tree from the input while the `render` method generates the output HTML (see [markdown-it](https://github.com/markdown-it/markdown-it)).
-
-```js
-const { ExtraMark } = require("extramark");
-
-const html = ExtraMark.render("# Heading");
-```
-
-### CLI
-
-To transform documents in the command line you have to install the `extramark` package globally.
-
-```bash
-npm install -g extramark
-```
-
-After the installation the `extramark` command becomes available. The command can be used to transform the input text (file or `stdin`) to HTML (file or `stdout`).
-
-```bash
-extramark input.md -o output.html -c style.css
-```
-
-To see all options of the `extramark` see it's help:
-
-```bash
-extramark --help
-```
-
-### Browser
-
-The `extramark` package includes a browser build in [IIFE]https://developer.mozilla.org/en-US/docs/Glossary/IIFE) format in the `dist` folder. You can include the production (`extramark.min.js`) or development (`extramark.js`) build in your HTML. The script exposes the ExtraMark object into the global scope.
-
-```html
-<script src="path/to/extramark.min.js"></script>
-<script>
-  const html = ExtraMark.render("# Heading");
-</script>
-```
-
-The recommended way to add `extramark` to your site is from a CDN like [jsdelivr](https://www.jsdelivr.com/package/npm/extramark) or [unpkg](https://unpkg.com/extramark).
-
-## Prerequisites
-
-You need to have [NodeJS](https://nodejs.org) installed on your computer to use the CLI tool.
-
 ## Contributing
 
 All ideas, recommendations, bug reports, pull requests are welcome. :smile:
+
+[badge-version]: https://img.shields.io/npm/v/extramark.svg?style=flat-square
+[badge-license]: https://img.shields.io/npm/l/extramark.svg?style=flat-square
+[badge-style]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square

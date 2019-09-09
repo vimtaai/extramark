@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 0.2.1 (2019-09-09)
+
+- **Updated** dependencies
+
 ## Version 0.2.0 (2019-06-28)
 
 - **Changed** function export style in Node.js **(breaking change)**

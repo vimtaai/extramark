@@ -27,7 +27,7 @@
   "dependencies": {
     "commander": "^3.0.1",
     "common-tags": "^1.8.0",
-    "critic-markup": "^0.3.1",
+    "critic-markup": "^0.4.0",
     "fs-extra": "^8.1.0",
     "markdown-it": "^10.0.0",
     "markdown-it-abbr": "^1.0.4",

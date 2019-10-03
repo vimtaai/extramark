@@ -1,6 +1,6 @@
 {
   "name": "extramark",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "CommonMark superset with the most widely used syntax extensions",
   "author": "Márton Visnovitz <vimtaai@inf.elte.hu>",
   "license": "MIT",

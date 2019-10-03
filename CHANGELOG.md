@@ -1,22 +1,26 @@
 # Changelog
 
-## Version 0.3.1 (2019-09-11)
+## [0.3.2] - 2019-10-03
 
-- **Updated** dependencies
+- 🔺 Dependency update
 
-## Version 0.3.0 (2019-09-11)
+## [0.3.1] - 2019-09-11
 
-- **Updated** dependencies
-- **Changed** the list of supported browsers **(breaking change)** - dropped support for IE and Opera Mini
+- 🔺 Dependency update
+
+## [0.3.0] - 2019-09-11
+
+- 🔺 Dependency update
+- 🔺 Changed list of supported browsers - dropped support for IE and Opera Mini (⚡)
 - 
-## Version 0.2.1 (2019-09-09)
+## [0.2.1] - 2019-09-09
 
-- **Updated** dependencies
+- 🔺 Dependency update
 
-## Version 0.2.0 (2019-06-28)
+## [0.2.0] - 2019-06-28
 
-- **Changed** function export style in Node.js **(breaking change)**
+- 🔺 Change function export style in Node.js (⚡)
 
-## Version 0.1.0 (2019-02-06)
+## [0.1.0] - 2019-02-06
 
-- **Initial release**
+- ✨ **Initial release**

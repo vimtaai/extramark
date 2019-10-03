@@ -25,7 +25,7 @@
     "prepare": "npm run build:node && npm run build:browser && npm run build:browser:production"
   },
   "dependencies": {
-    "commander": "^3.0.1",
+    "commander": "^3.0.2",
     "common-tags": "^1.8.0",
     "critic-markup": "^0.4.0",
     "fs-extra": "^8.1.0",
@@ -39,16 +39,16 @@
     "signale": "^1.4.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.0",
-    "@babel/preset-env": "^7.6.0",
-    "eslint": "^6.3.0",
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.3.0",
     "eslint-config-problems": "^3.0.1",
-    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-prettier": "^3.1.1",
     "prettier": "^1.18.2",
-    "rollup": "^1.21.2",
+    "rollup": "^1.22.0",
     "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-babel-minify": "^9.0.0",
+    "rollup-plugin-babel-minify": "^9.1.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-builtins": "^2.1.2",

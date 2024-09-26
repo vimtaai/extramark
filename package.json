@@ -46,7 +46,7 @@
     "eslint-config-problems": "^3.0.1",
     "eslint-plugin-prettier": "^3.1.1",
     "prettier": "^1.18.2",
-    "rollup": "^1.22.0",
+    "rollup": "^2.79.2",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-babel-minify": "^9.1.0",
     "rollup-plugin-commonjs": "^10.1.0",

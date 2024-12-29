@@ -17,8 +17,8 @@
     "/bin"
   ],
   "scripts": {
-    "lint": "eslint 'src/**/*.js'",
-    "format": "prettier --check 'src/**/*.js'",
+    "lint": "eslint '{src,bin}/**/*.js'",
+    "format": "prettier --check '{src,bin}/**/*.js'",
     "build:node": "rollup -c --environment TARGET:node",
     "build:browser": "rollup -c --environment TARGET:browser,BUILD:development",
     "build:browser:production": "rollup -c --environment TARGET:browser,BUILD:production",
@@ -29,7 +29,6 @@
     "commander": "^3.0.2",
     "common-tags": "^1.8.0",
     "critic-markup": "^0.4.0",
-    "fs-extra": "^8.1.0",
     "markdown-it": "^10.0.0",
     "markdown-it-abbr": "^1.0.4",
     "markdown-it-anchor": "^5.2.4",

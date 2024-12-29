@@ -1,5 +1,3 @@
-const { Signale } = require("signale");
+import Signale from "signale";
 
-const logger = new Signale({ scope: "extramark", interactive: true });
-
-module.exports = { logger };
+export const logger = new Signale.Signale({ scope: "extramark", interactive: true });

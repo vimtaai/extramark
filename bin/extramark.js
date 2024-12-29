@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 
-const path = require("path");
-const program = require("commander");
+import path from "node:path";
+import fs from "node:fs/promises";
+import process from "node:process";
+import program from "commander";
 
-const { ensureDir, readFile, writeFile } = require("fs-extra");
-const { html } = require("common-tags");
-const { render } = require("../lib/extramark");
-const { logger } = require("./utils/logger");
+import { html } from "common-tags";
+import { render } from "../lib/extramark.js";
+import { logger } from "./utils/logger.js";
 
 program
   .description("CLI for converting Markdown documents to HTML with ExtraMark")
@@ -20,12 +21,12 @@ program
 
 async function convert(program) {
   const input = {
-    file: program.input || program.args[0] || process.stdin.fd
+    file: program.input || program.args[0] || process.stdin.fd,
   };
 
   const output = {
     dir: program.output ? path.dirname(program.output) : "",
-    file: program.output || process.stdout.fd
+    file: program.output || process.stdout.fd,
   };
 
   if (program.quiet || output.file === process.stdout.fd) {
@@ -34,7 +35,7 @@ async function convert(program) {
 
   try {
     logger.await("Reading input...");
-    input.data = await readFile(input.file, "utf-8");
+    input.data = await fs.readFile(input.file, "utf-8");
   } catch (err) {
     logger.error(`Could not read input file \`${input.file}\`.\n`, err);
     return;
@@ -55,7 +56,7 @@ async function convert(program) {
   }
 
   try {
-    await ensureDir(output.dir);
+    await fs.mkdir(output.dir, { recursive: true });
   } catch (err) {
     logger.error(`Could not create output dir \`${output.dir}\`.\n`, err);
     return;
@@ -63,7 +64,7 @@ async function convert(program) {
 
   try {
     logger.await("Writing output...");
-    await writeFile(output.file, output.data);
+    await fs.writeFile(output.file, output.data);
     logger.success(`Created: ${output.file}`);
   } catch (err) {
     logger.error(`Could not write output file \`${output.file}\`.\n`, err);

@@ -6,29 +6,20 @@
   "license": "MIT",
   "repository": "github:vimtaai/extramark",
   "type": "module",
-  "module": "src/index.js",
-  "main": "lib/extramark.js",
-  "browser": "dist/extramark.min.js",
+  "main": "src/index.js",
   "bin": "bin/extramark.js",
   "files": [
-    "/src",
-    "/lib",
-    "/dist",
-    "/bin"
+    "src",
+    "bin"
   ],
   "scripts": {
     "lint": "eslint '{src,bin}/**/*.js'",
-    "format": "prettier --check '{src,bin}/**/*.js'",
-    "build:node": "rollup -c --environment TARGET:node",
-    "build:browser": "rollup -c --environment TARGET:browser,BUILD:development",
-    "build:browser:production": "rollup -c --environment TARGET:browser,BUILD:production",
-    "watch:node": "rollup -c -w --environment TARGET:node",
-    "watch:browser": "rollup -c -w --environment TARGET:browser,BUILD:development"
+    "format": "prettier --check '{src,bin}/**/*.js'"
   },
   "dependencies": {
     "commander": "^3.0.2",
     "common-tags": "^1.8.0",
-    "critic-markup": "^0.4.0",
+    "critic-markup": "^0.5.0",
     "markdown-it": "^10.0.0",
     "markdown-it-abbr": "^1.0.4",
     "markdown-it-anchor": "^5.2.4",
@@ -39,17 +30,8 @@
     "signale": "^1.4.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.2",
-    "@babel/preset-env": "^7.6.2",
     "@eslint/js": "^9.17.0",
     "eslint": "^9.17.0",
-    "prettier": "^3.4.2",
-    "rollup": "^1.22.0",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-babel-minify": "^9.1.0",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-json": "^4.0.0",
-    "rollup-plugin-node-builtins": "^2.1.2",
-    "rollup-plugin-node-resolve": "^5.2.0"
+    "prettier": "^3.4.2"
   }
 }

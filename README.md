@@ -1,10 +1,12 @@
 # ExtraMark
 
-[![Version][badge-version]](https://npmjs.com/package/extramark)
-[![License][badge-license]](https://github.com/vimtaai/extramark/blob/master/LICENSE.md)
-[![Code style][badge-style]](https://github.com/prettier/prettier)
+[![License][badge-license]][link-license]
+[![Version][badge-version]][link-version]
 
-> CommonMark superset with the most widely used syntax extensions
+[badge-license]: https://img.shields.io/npm/l/extramark.svg
+[link-license]: https://github.com/vimtaai/extramark/blob/master/LICENSE.md
+[badge-version]: https://img.shields.io/npm/v/extramark.svg
+[link-version]: https://npmjs.com/package/extramark
 
 **ExtraMark** is a superset of [CommonMark](https://commonmark.org/) that includes syntax extensions that are commonly used by other Markdown dialects. The list and syntax for the extensions are decided by looking at the most popular Markdown dialects and selecting the most common syntax for each feature. The goal of the project is to create a (somewhat) standard superset of CommonMark that supports the features that are requested by most. The parser is based on [markdown-it](https://github.com/markdown-it/markdown-it) and uses plugins for syntax extensions.
 
@@ -14,12 +16,6 @@ Install via `npm`:
 
 ```bash
 npm install extramark
-```
-
-Load from a CDN:
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/extramark"></script>
 ```
 
 ## Usage
@@ -69,7 +65,7 @@ extramark --help
   - [Automatic typographic replacements][typographer]
   - [Tables][table]
   - [Anchors for headings][anchor] (up to heading level 3)
-  - [Definition lists][deflist]
+  - [Definition lists][definition-list]
   - [Superscript][superscript]
   - [Subscript][subscript]
   - [Abbreviations][abbreviation]
@@ -80,7 +76,7 @@ extramark --help
 [typographer]: https://github.com/markdown-it/markdown-it/blob/master/lib/rules_core/replacements.js
 [table]: https://help.github.com/articles/organizing-information-with-tables/
 [anchor]: https://github.com/valeriangalliat/markdown-it-anchor
-[deflist]: https://github.com/markdown-it/markdown-it-deflist
+[definition-list]: https://github.com/markdown-it/markdown-it-deflist
 [superscript]: https://github.com/markdown-it/markdown-it-sup
 [subscript]: https://github.com/markdown-it/markdown-it-sub
 [abbreviation]: https://github.com/markdown-it/markdown-it-abbr
@@ -89,8 +85,4 @@ extramark --help
 
 ## Contributing
 
-All ideas, recommendations, bug reports, pull requests are welcome. :smile:
-
-[badge-version]: https://img.shields.io/npm/v/extramark.svg?style=flat-square
-[badge-license]: https://img.shields.io/npm/l/extramark.svg?style=flat-square
-[badge-style]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square
+All ideas, recommendations, bug reports, pull requests are welcome. 🙂

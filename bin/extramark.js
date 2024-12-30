@@ -6,7 +6,7 @@ import process from "node:process";
 import program from "commander";
 
 import { html } from "common-tags";
-import { render } from "../lib/extramark.js";
+import { render } from "../src/index.js";
 import { logger } from "./utils/logger.js";
 
 program

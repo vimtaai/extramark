@@ -1,9 +1,6 @@
 # editor config
 .vscode
+.idea
 
 # dependencies
 node_modules
-
-# output files
-lib
-dist

@@ -1,3 +1,16 @@
+# 1.0.0 (2025-02-14)
+
+
+### Bug Fixes
+
+* update eslint ([fde057a](https://github.com/vimtaai/extramark/commit/fde057a601e070adbd010e43d42d9409de66e00a))
+* update prettier ([b7cd68e](https://github.com/vimtaai/extramark/commit/b7cd68e24b4d65350d7b84d7efd7c0990a711ec7))
+
+
+### Features
+
+* update markdown-it and plugins ([983939e](https://github.com/vimtaai/extramark/commit/983939e959bf8fb4baf43fc955d71b605edd49ca))
+
 # Changelog
 
 ## [0.3.2] - 2019-10-03

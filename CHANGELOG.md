@@ -15,7 +15,7 @@
 
 * version number is reset
 
-# 1.0.0 (2025-02-14)
+## 1.0.0 (2025-02-14)
 
 
 * feat!: reset version and changelog ([27dd17b](https://github.com/vimtaai/extramark/commit/27dd17b3f220963ca93c51c60222d12c76d6a3a6))

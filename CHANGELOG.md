@@ -5,7 +5,7 @@
 
 * update critic-markup to v2 ([7e6f059](https://github.com/vimtaai/extramark/commit/7e6f0591e4494be5021960010423e8adf7a9ee2d))
 
-# [2.0.0](https://github.com/vimtaai/extramark/compare/v1.0.0...v2.0.0) (2025-02-14)
+## [2.0.0](https://github.com/vimtaai/extramark/compare/v1.0.0...v2.0.0) (2025-02-14)
 
 
 * feat!: reset version and changelog ([27dd17b](https://github.com/vimtaai/extramark/commit/27dd17b3f220963ca93c51c60222d12c76d6a3a6))

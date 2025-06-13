@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { error, log } from "node:console";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname } from "node:path";

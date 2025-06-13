@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/vimtaai/extramark/compare/v2.0.2...v2.0.3) (2025-06-13)
+
+
+### Bug Fixes
+
+* add missing source files to published version ([91462be](https://github.com/vimtaai/extramark/commit/91462be353aebebb43fa29e8aa0709959c91d4cf))
+
 ## [2.0.2](https://github.com/vimtaai/extramark/compare/v2.0.1...v2.0.2) (2025-06-13)
 
 

@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/vimtaai/extramark/compare/v2.0.1...v2.0.2) (2025-06-13)
+
+
+### Bug Fixes
+
+* add shebang to cli ([8ad2a6c](https://github.com/vimtaai/extramark/commit/8ad2a6cae6d9a3be1d1c96fe2230711a9e0f9e23))
+
 ## [2.0.1](https://github.com/vimtaai/extramark/compare/v2.0.0...v2.0.1) (2025-02-14)
 
 

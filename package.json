@@ -9,7 +9,7 @@
   "main": "src/index.js",
   "bin": "bin/extramark.js",
   "files": [
-    "src/**/.js",
+    "src/**/*.js",
     "bin/**/*.js"
   ],
   "scripts": {

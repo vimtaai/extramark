@@ -54,7 +54,7 @@ try {
     await mkdir(dirname(outputFile), { recursive: true });
     await writeFile(outputFile, data.parsed);
   } else {
-    stdout.write(data.parsed + "\n");
+    stdout.write(`${data.parsed}\n`);
   }
 
   if (outputFile && !options.quiet) {

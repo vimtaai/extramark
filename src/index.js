@@ -1,11 +1,11 @@
 import MarkdownIt from "markdown-it";
 
+import abbr from "markdown-it-abbr";
 import anchor from "markdown-it-anchor";
 import deflist from "markdown-it-deflist";
-import sup from "markdown-it-sup";
-import sub from "markdown-it-sub";
-import abbr from "markdown-it-abbr";
 import footnote from "markdown-it-footnote";
+import sub from "markdown-it-sub";
+import sup from "markdown-it-sup";
 
 import critic from "./critic.js";
 

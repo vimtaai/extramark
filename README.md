@@ -1,16 +1,12 @@
 # ExtraMark
 
-[![License][badge-license]][link-license]
-[![Version][badge-version]][link-version]
+[![License][license-badge]][license-link]
+[![Version][version-badge]][version-link]
+[![Build][build-badge]][build-link]
 
-[badge-license]: https://img.shields.io/npm/l/extramark.svg
-[link-license]: https://github.com/vimtaai/extramark/blob/master/LICENSE.md
-[badge-version]: https://img.shields.io/npm/v/extramark.svg
-[link-version]: https://npmjs.com/package/extramark
+Superset of [CommonMark](https://commonmark.org/) that includes syntax extensions that are commonly used by other Markdown dialects. The list and syntax for the extensions are decided by looking at the most popular Markdown dialects and selecting the most common syntax for each feature. The goal of the project is to create a (somewhat) standard superset of CommonMark that supports the features that are requested by most. The parser is based on [markdown-it](https://github.com/markdown-it/markdown-it) and uses plugins for syntax extensions.
 
-**ExtraMark** is a superset of [CommonMark](https://commonmark.org/) that includes syntax extensions that are commonly used by other Markdown dialects. The list and syntax for the extensions are decided by looking at the most popular Markdown dialects and selecting the most common syntax for each feature. The goal of the project is to create a (somewhat) standard superset of CommonMark that supports the features that are requested by most. The parser is based on [markdown-it](https://github.com/markdown-it/markdown-it) and uses plugins for syntax extensions.
-
-## Installation
+## Setup
 
 Install via `npm`:
 
@@ -85,4 +81,11 @@ extramark --help
 
 ## Contributing
 
-All ideas, recommendations, bug reports, pull requests are welcome. 🙂
+All ideas, recommendations, bug reports, pull requests are welcome. 😊
+
+[license-badge]: https://img.shields.io/npm/l/extramark.svg
+[license-link]: https://github.com/vimtaai/extramark/blob/master/LICENSE.md
+[version-badge]: https://img.shields.io/npm/v/extramark.svg
+[version-link]: https://npmjs.com/package/extramark
+[build-badge]: https://github.com/vimtaai/extramark/actions/workflows/main.yaml/badge.svg
+[build-link]: https://github.com/vimtaai/extramark/actions/workflows/main.yaml

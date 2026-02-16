@@ -4,6 +4,7 @@
 
 - 🏗️ Rework CI/CD and publish pipeline
 - ⚡ Replace Prettier and ESLint with Biome
+- 📝 Minor documentation update
 
 ## 2.0.1 (2025-02-14)
 

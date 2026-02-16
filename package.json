@@ -15,8 +15,7 @@
   "scripts": {
     "check": "biome check",
     "check:ci": "biome ci",
-    "check:fix": "biome check --write",
-    "release": "semantic-release"
+    "check:fix": "biome check --write"
   },
   "dependencies": {
     "commander": "^12.1.0",
@@ -31,9 +30,6 @@
     "markdown-it-sup": "^2.0.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.2",
-    "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/git": "^10.0.1",
-    "semantic-release": "^24.2.2"
+    "@biomejs/biome": "^2.4.2"
   }
 }

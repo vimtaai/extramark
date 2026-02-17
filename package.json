@@ -6,11 +6,10 @@
   "license": "MIT",
   "repository": "github:vimtaai/extramark",
   "type": "module",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "bin": "bin/extramark.js",
   "files": [
-    "src/**/*.js",
-    "bin/**/*.js"
+    "{lib,bin}/**/*.js"
   ],
   "scripts": {
     "check": "biome check",

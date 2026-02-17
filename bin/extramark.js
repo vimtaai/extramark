@@ -9,7 +9,7 @@ import { styleText } from "node:util";
 import { program } from "commander";
 import { html } from "common-tags";
 
-import { render } from "../src/index.js";
+import { render } from "../lib/index.js";
 
 program
   .description("CLI for converting Markdown documents to HTML with ExtraMark")

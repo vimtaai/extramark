@@ -13,7 +13,7 @@ import { render } from "../lib/index.js";
 
 program
   .description("CLI for converting Markdown documents to HTML with ExtraMark")
-  .usage("<input> [options]")
+  .argument("<input>", "path of the input .md file")
   .option("-o --output [path]", "path of the output .html file")
   .option("-c --css [css]", "path to the CSS file to use for formatting")
   .option("-t --title [title]", "title of the output document")

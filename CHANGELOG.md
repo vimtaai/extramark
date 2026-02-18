@@ -1,9 +1,13 @@
 # Changelog
 
+## Current changes
+
+- ♻️ Minor folder structure refactor
+
 ## 2.1.0 (2026-02-17)
 
 - 🏗️ Rework CI/CD and publish pipeline
-- ⚡ Replace Prettier and ESLint with Biome
+- 🛠️ Replace Prettier and ESLint with Biome
 - ⬆️ Update dependencies
 - 📝 Minor documentation update
 - 📝 Add input file argument to CLI help

@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.1 (2026-09-13)
+
+- 📝 Fix stale ESM/browser-global example and wrong `render()` output in README
+
 ## 3.0.0 (2026-09-13)
 
 - ♻️ Minor folder structure refactor

@@ -19,19 +19,13 @@ npm install extramark
 The `extramark` package exposes two functions, `parse()` and `render()`. The `parse()` function creates an abstract syntax tree from the input while the `render()` function returns the generated HTML code (see [markdown-it](https://github.com/markdown-it/markdown-it)).
 
 ```js
-const { parse, render } = require("extramark");
+import { parse, render } from "extramark";
 
 parse("# Heading");
 // [Object] - AST of the Markdown code
 
 render("# Heading");
-// <h1>Heading</h1>
-```
-
-In a browser environment you can access the `parse()` and `render()` functions via the `ExtraMark` global object.
-
-```js
-const { parse, render } = ExtraMark;
+// <h1 id="heading" tabindex="-1">Heading</h1>
 ```
 
 ### CLI

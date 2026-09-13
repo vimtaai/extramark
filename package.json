@@ -19,13 +19,13 @@
     "check:fix": "biome check --write"
   },
   "dependencies": {
-    "commander": "^14.0.3",
+    "commander": "^15.0.0",
     "common-tags": "^1.8.2",
-    "markdown-it": "^14.1.0",
-    "markdown-it-critic": "^1.0.0",
+    "markdown-it": "^15.0.2",
+    "markdown-it-critic": "^1.0.1",
     "markdown-it-abbr": "^2.0.0",
-    "markdown-it-anchor": "^9.2.0",
-    "markdown-it-deflist": "^3.0.0",
+    "markdown-it-anchor": "^10.0.0",
+    "markdown-it-deflist": "^4.0.0",
     "markdown-it-footnote": "^4.0.0",
     "markdown-it-sub": "^2.0.0",
     "markdown-it-sup": "^2.0.0"

@@ -1,8 +1,15 @@
 # Changelog
 
-## Current changes
+## 3.0.0 (2026-09-13)
 
 - ♻️ Minor folder structure refactor
+- 🐛 Fix `--title`/`--css` CLI options being silently ignored
+- ♻️ Register CriticMarkup support via `markdown-it-critic` as a native plugin, replacing
+  raw-string preprocessing
+- 🧪 Add test coverage for the CLI and the curated plugin bundle
+- 🏗️ Run tests in CI
+- 💥 Update `commander`, `markdown-it`, `markdown-it-anchor`, and `markdown-it-deflist` to their
+  latest major versions (requires Node >=22.12.0)
 
 ## 2.1.0 (2026-02-17)
 

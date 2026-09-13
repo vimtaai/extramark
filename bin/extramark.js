@@ -41,8 +41,8 @@ try {
   data.parsed = html`
     <!DOCTYPE html>
     <meta charset="utf-8" />
-    <title>${program.title || `Markdown document`}</title>
-    ${program.css ? `<link rel="stylesheet" href="${program.css}">` : ``} ${await render(data.raw)}
+    <title>${options.title || `Markdown document`}</title>
+    ${options.css ? `<link rel="stylesheet" href="${options.css}">` : ``} ${await render(data.raw)}
   `;
 } catch {
   error(`${styleText("red", "!")} Could not parse input data.`);
